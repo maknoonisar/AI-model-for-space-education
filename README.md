@@ -37,72 +37,66 @@ Edit
 
 ### Setup Instructions
 
-1. Clone the Repository:
-
-```bash
+🔹 Setup Instructions
+1️⃣ Clone the Repository:
+sh
+Copy
+Edit
 git clone https://github.com/maknoonisar/AI-model-for-space-education.git
 cd AI-model-for-space-education/backend
-Create a Virtual Environment:
-bash
+2️⃣ Create a Virtual Environment:
+sh
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate  # On Windows
-Install Dependencies:
-bash
+venv\Scripts\activate     # On Windows
+3️⃣ Install Dependencies:
+sh
 Copy
 Edit
 pip install -r requirements.txt
-Running the Project Locally
-Start the Backend
-bash
+🚀 Running the Project Locally
+🔹 Start the Backend
+sh
 Copy
 Edit
 python app.py
-This will start the Flask server, which runs on http://127.0.0.1:5000/ by default.
+This will start the Flask server on http://127.0.0.1:5000/ by default.
 
-Open the Frontend
-Navigate to the frontend folder and open index.html in a browser.
+🔹 Open the Frontend
+Navigate to the frontend/ folder and open index.html in a browser.
+Ensure video and image assets are correctly referenced in /assets/.
+🌍 Deployment
+For deployment, consider using:
 
-Ensure the video and image assets are correctly referenced in /assets/.
-
-Deployment
-For deployment, consider using Flask with Gunicorn on a cloud platform or Docker for containerization. If deploying on Streamlit Community Cloud, ensure the app is structured accordingly.
-
-Troubleshooting
-Flask does not run? Verify dependencies using:
-
-bash
+Flask with Gunicorn on a cloud platform
+Docker for containerization
+Heroku or AWS for production hosting
+🔧 Troubleshooting
+✅ If Flask does not run:
+sh
 Copy
 Edit
-pip freeze
-Assets do not load? Ensure the paths are correctly configured.
-
-CORS issues? Install Flask-CORS:
-
-bash
+pip freeze  # Check installed dependencies
+✅ If assets do not load:
+Ensure the paths are correctly configured in index.html.
+✅ If encountering CORS issues, install Flask-CORS:
+sh
 Copy
 Edit
 pip install flask-cors
-Then, add this to app.py:
+Then, add this in app.py:
 
 python
 Copy
 Edit
 from flask_cors import CORS
 CORS(app)
-Contributing
+👥 Contributing
 Pull requests are welcome! Please open an issue first to discuss any major changes.
 
-License
+📜 License
 This project is licensed under the MIT License.
-
-Happy Coding! 🚀
-vbnet
-Copy
-Edit
-
-This structure includes all of your sections, the directory layout, installation steps, and troubl
 
 
