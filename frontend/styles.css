@@ -1,0 +1,220 @@
+/* Dark theme styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Dashboard Grid Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 8fr 3fr; /* Adjusted for 3 columns on each side and 6 columns in the center */
+    grid-template-rows: 1fr;
+    height: 100vh;
+    gap: 10px; /* Space between columns */
+}
+
+/* Sidebar */
+.sidebar {
+    background: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    background: #333;
+}
+
+/* Main Content */
+/* Content Area */
+.content {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    overflow-y: scroll; /* Enable scrolling */
+    max-height: 100vh; /* Prevent content from overflowing the screen */
+}
+
+/* Invisible Scroll */
+.content::-webkit-scrollbar {
+    width: 0px; /* Hide the scrollbar */
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: transparent; /* No color for thumb */
+}
+
+/* Sections */
+section {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    max-height: 400px; /* Set max height for each section */
+    overflow-y: scroll; /* Allow scrolling if content overflows */
+}
+
+/* Invisible Scroll for sections */
+section::-webkit-scrollbar {
+    width: 0px; /* Hide the scrollbar */
+}
+
+section::-webkit-scrollbar-thumb {
+    background: transparent; /* No color for thumb */
+}
+
+
+h2 {
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* Inputs & Buttons */
+input, select {
+    width: 98%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #ffaa00;
+}
+
+/* Settings Panel */
+.settings {
+    background: #1e1e1e;
+    padding: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    max-height: 100vh; /* Set max height for each section */
+    overflow-y: scroll; /* Allow scrolling if content overflows */
+}
+
+/* Invisible Scroll for settings */
+.settings::-webkit-scrollbar {
+    width: 0px; /* Hide the scrollbar */
+}
+
+.settings::-webkit-scrollbar-thumb {
+    background: transparent; /* No color for thumb */
+}
+
+
+.settings h3 {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+        grid-template-rows: auto auto auto;
+    }
+}
+
+
+#next-question {
+    background: #b18e05;
+    border: none;
+    padding: 6px;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    right: 485px;
+    color: #121212;
+}
+
+
+.media-section {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.video-carousel, .image-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#video-player, #image-display {
+    width: 80%;
+    max-height: 600px;
+}
+
+/* Specific button styles for the carousels */
+#prev-video, #next-video, #prev-image, #next-image {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+#prev-video:hover, #next-video, #prev-image:hover, #next-image:hover {
+    background-color: #555;
+}
+
+/* Optional: Adjust for better layout in carousel */
+#prev-video, #next-video {
+    width: 40px;
+    height: 40px;
+}
+
+#prev-image, #next-image {
+    width: 40px;
+    height: 40px;
+}

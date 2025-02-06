@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Space Education Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h2>🚀 Space Explorer</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="ask-tab">💬 AI Chat</a></li>
+                    <li><a href="#" id="quiz-tab">🧠 Space Quiz</a></li>
+                    <li><a href="#" id="learn-tab">📖 Learn</a></li>
+                    <li><a href="#" id="settings-tab">⚙️ Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+              <!-- Learning Resources -->
+              <section id="learn-section">
+                <h2>📖 Learn About Space</h2>
+                <p>Explore the wonders of the universe, from the mysterious black holes to the fascinating planets that make up our solar system!</p>
+                <ul>
+                    <li><strong>🌌 Black Holes:</strong> Did you know black holes aren't empty? They are incredibly dense regions where gravity is so strong that not even light can escape. These cosmic giants are often formed when massive stars collapse under their own gravity, warping space and time around them.</li>
+                    <li><strong>✨ Nebulas:</strong> Nebulas are vast clouds of gas and dust in space, often acting as star nurseries. The famous "Pillars of Creation" in the Eagle Nebula is where new stars are born, creating breathtaking beauty in the cosmos.</li>
+                </ul>
+                <p>Space is full of mysteries waiting to be uncovered. From the origins of our universe to the search for extraterrestrial life, there's always something new to learn. Dive deeper into the cosmic unknown and expand your understanding of the universe!</p>
+            </section>
+            
+            <!-- AI Chat Section -->
+            <section id="ask-section">
+                <h2>💬 AI Chat</h2>
+                <input type="text" id="question" placeholder="Ask me anything about space!">
+                <button id="askButton">Ask</button>
+                <div id="answerContainer">
+                    <div id="loading" style="display:none;">
+                        <div class="spinner"></div>
+                        <p>Thinking... Please wait.</p>
+                    </div>
+                    <p id="answer"></p></div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quiz-section">
+                <h2>🧠 Space Quiz</h2>
+                <button id="start-quiz">Start Quiz</button>
+                <div id="quiz-questions"></div>
+            </section>
+        </main>
+
+        <!-- Personalization Section -->
+        <aside class="settings">
+            <h3>⚙️ Personalization Questions</h3>
+            <label for="topic-select">Choose Topic:</label>
+            <select id="topic-select">
+                <option value="planets">Planets</option>
+                <option value="blackholes">Black Holes</option>
+                <option value="solar_system">Solar System</option>
+                <option value="stars">Stars</option>
+                <option value="galaxies">Galaxies</option>
+                <option value="nebulae">Nebulae</option>
+                <option value="comets">Comets</option>
+                <option value="asteroids">Asteroids</option>
+                <option value="space_exploration">Space Exploration</option>
+                <option value="moon_missions">Moon Missions</option>
+                <option value="exoplanets">Exoplanets</option>
+            </select>
+            <label for="level-select">Difficulty Level:</label>
+            <select id="level-select">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <button id="start-Personalizationchat">Start Chat</button>
+          
+            <div id="loading-message" style="display:none;">Loading...</div>
+            <div id="answerContainerPersonalizationchat"></div> <!-- Correct container for answers in Personalization section -->
+        
+        
+            <aside class="media-section">
+                <h3>🎬 Media Showcase</h3>
+            
+                <!-- Video Carousel -->
+                <div class="video-carousel">
+                    <button id="prev-video" onclick="changeVideo(-1)">&#10094;</button>
+                    <video id="video-player" controls autoplay>
+                        <source id="video-source" src="assets/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button id="next-video" onclick="changeVideo(1)">&#10095;</button>
+                </div>
+            
+                <!-- Image Carousel -->
+                <div class="image-carousel">
+                    <button id="prev-image" onclick="changeImage(-1)">&#10094;</button>
+                    <img id="image-display" src="assets/pic1.jpg" alt="Image Carousel" />
+                    <button id="next-image" onclick="changeImage(1)">&#10095;</button>
+                </div>
+            </aside>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </aside>
+
+
+   
+
+    </div>
+
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

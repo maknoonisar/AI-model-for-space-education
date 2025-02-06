@@ -1,1 +1,0 @@
-# AI-model-for-space-education
